@@ -37,6 +37,9 @@
       transform: scale(1.05);
     }
     .mensagem {
+  background: rgba(255, 255, 255, 0.7);
+  padding: 20px;
+  border-radius: 20px;
       font-size: 2.5em;
       color: #ff4d88;
       opacity: 0;
@@ -102,7 +105,7 @@
 
 <div id="pedidoFinal" class="mensagem">
   <div style="font-size: 2em;">Quer namorar comigo?</div>
-  <img id="buquet" src="https://i.imgur.com/EDyI1kR.png" alt="Buquê de flores vermelhas" />
+  <img id="buquet" src="bouquet_transparent.png" alt="Buquê de flores vermelhas" />
   <div id="botoes">
     <button onclick="responder(true)" style="padding: 12px 25px; font-size: 1.2em; border-radius: 20px; background-color: #ff94b8; color: white; border: none; margin: 10px;">Sim 💖</button>
     <button onclick="responder(false)" style="padding: 12px 25px; font-size: 1.2em; border-radius: 20px; background-color: #ff4d4d; color: white; border: none; margin: 10px;">Não 😢</button>
@@ -175,6 +178,30 @@ function responder(sim) {
   }
   mensagemFinal.classList.add('show');
 }
+</script>
+
+
+<script>
+for (let i = 0; i < 20; i++) {
+  const heart = document.createElement('div');
+  heart.textContent = '❤️';
+  heart.style.position = 'absolute';
+  heart.style.left = Math.random() * 100 + 'vw';
+  heart.style.top = Math.random() * 100 + 'vh';
+  heart.style.fontSize = (10 + Math.random() * 20) + 'px';
+  heart.style.opacity = 0.6;
+  heart.style.animation = 'flutuar 10s linear infinite';
+  document.body.appendChild(heart);
+}
+
+const estiloExtra = document.createElement('style');
+estiloExtra.textContent = `
+@keyframes flutuar {
+  0% { transform: translateY(0); opacity: 0.3; }
+  50% { opacity: 0.8; }
+  100% { transform: translateY(-100vh); opacity: 0; }
+}`;
+document.head.appendChild(estiloExtra);
 </script>
 
 </body>
