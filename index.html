@@ -63,7 +63,7 @@
       opacity: 1;
     }
     #pedidoFinal {
-      display: none;
+      display: flex; flex-direction: column; align-items: center;
       flex-direction: column;
       align-items: center;
       justify-content: center;
@@ -105,7 +105,7 @@
 
 <div id="pedidoFinal" class="mensagem">
   <div style="font-size: 2em;">Quer namorar comigo?</div>
-  <img id="buquet" src="bouquet_transparent.png" alt="Buquê de flores vermelhas" />
+  <img id="buquet" src="https://i.imgur.com/vH8z6uU.png" alt="Buquê de flores vermelhas" />
   <div id="botoes">
     <button onclick="responder(true)" style="padding: 12px 25px; font-size: 1.2em; border-radius: 20px; background-color: #ff94b8; color: white; border: none; margin: 10px;">Sim 💖</button>
     <button onclick="responder(false)" style="padding: 12px 25px; font-size: 1.2em; border-radius: 20px; background-color: #ff4d4d; color: white; border: none; margin: 10px;">Não 😢</button>
